@@ -1,0 +1,35 @@
+<div class="tituloListas">
+  <h1>Prato do dia</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field class="campo-pequeno">
+        <mat-label>Selecionar prato</mat-label>
+        <mat-select matNativeControl id="prato" (selectionChange)="recarregarPrato()" required name="prato" [(ngModel)]="prato.produto.codigo">
+          <mat-option *ngFor="let produto of produtos" [value]="produto.codigo">
+            {{produto.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" disabled placeholder="Descrição" name="descricao" [(ngModel)]="prato.produto.descricao">
+      </mat-form-field>
+      <div>
+        <label disabled for="imgFoto">Foto</label>
+        <img id="imgFoto" disabled style="cursor: pointer" src="{{URL_SERVIDOR_UPLOAD_FOTO + prato.produto.foto}}"> 
+      </div>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" step="0.01" disabled placeholder="Preço" name="preco" [(ngModel)]="prato.produto.preco">
+      </mat-form-field>
+      <mat-radio-group id="ehVegetariano" [(ngModel)]="prato.produto.ehVegetariano">
+        <mat-label>O prato é vegetariano?</mat-label>
+        <mat-radio-button disabled [value]="true" name="ehVegetariano">Sim</mat-radio-button>
+        <mat-radio-button disabled [value]="false" name="ehVegetariano">Não</mat-radio-button>
+      </mat-radio-group>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button  (click)="atualizarPrato()" color="primary">Selecionar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

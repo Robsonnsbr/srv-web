@@ -1,0 +1,19 @@
+<section class="cards-cardapio">
+  <mat-card class="card-cardapio" *ngFor="let produto of itensDoCarrinho | async">
+    <mat-card-header>
+      <div mat-card-avatar class="card-header-image"></div>
+      <mat-card-title>{{ produto.nome }}</mat-card-title>
+      <mat-card-subtitle>{{ produto.nome }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ URL_SERVIDOR_UPLOAD_FOTO +  produto.foto }}" alt="Foto do produto">
+    <mat-card-content>
+      <p>
+        {{ produto.descricao }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+      <h3 class="preco">{{ produto.preco | formatoReal:'BRL' }}</h3>
+      <button mat-button (click)="adicionarAoCarrinho(produto)">ADICIONAR</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
