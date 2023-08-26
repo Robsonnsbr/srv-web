@@ -28,7 +28,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavComponent } from './layout/nav/nav.component';
-import { CardapioComponent } from './cardapio/cardapio.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CadastrosComponent } from './cadastros/cadastros.component';
 import { SobreComponent } from './sobre/sobre.component';
@@ -70,13 +70,13 @@ import { MeusPedidosComponent } from './cadastros/clientes/meuspedidos/meuspedid
 import { ErroComponent } from './carrinho/erro/erro.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     FooterComponent,
     NavComponent,
-    CardapioComponent,
+    ProdutosComponent,
     CarrinhoComponent,
     CadastrosComponent,
     SobreComponent,
@@ -116,8 +116,8 @@ import { ErroComponent } from './carrinho/erro/erro.component';
     LoginComponent,
     RegistrarComponent,
     MeusPedidosComponent,
-    ErroComponent
-   ],
+    ErroComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -136,9 +136,9 @@ import { ErroComponent } from './carrinho/erro/erro.component';
     MatInputModule,
     HttpClientModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

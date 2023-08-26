@@ -1,15 +1,16 @@
-html, body { 
-  height: 100%; 
-} 
+html,
+body {
+  height: 100%;
+}
 
-body { 
-  margin: 0; 
+body {
+  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #fafafa;
   overflow: hidden;
- }
+}
 
- main {
+main {
   position: absolute;
   overflow-y: scroll;
   margin-top: 0px !important;
@@ -17,31 +18,31 @@ body {
   bottom: 30px;
   right: 0px;
   left: 0px;
- }
+}
 
- div.tituloListas {
-   display: flex;
-   justify-content: space-between;
- }
+div.tituloListas {
+  display: flex;
+  justify-content: space-between;
+}
 
- div.tituloListas > h1 {
-  font-family: Roboto,Helvetica Neue,sans-serif;
+div.tituloListas>h1 {
+  font-family: Roboto, Helvetica Neue, sans-serif;
   font-size: 24px;
   font-weight: 800;
- }
+}
 
-.btnMyFood{
+.btnMyFood {
   width: 120px;
   line-height: 32px !important;
   margin-right: 5px !important;
 }
 
-button.btnMyFoodLista{
+button.btnMyFoodLista {
   width: 150px;
-  font-family: Roboto,Helvetica Neue,sans-serif;
+  font-family: Roboto, Helvetica Neue, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  line-height: 0px!important;
+  line-height: 0px !important;
   width: 100px;
   box-sizing: border-box;
   position: relative;
@@ -61,11 +62,11 @@ button.btnMyFoodLista{
   border-radius: 4px;
   overflow: visible;
   transform: translate3d(0, 0, 0);
-  transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 20px;
   color: #fff;
   background-color: #3f51b5;
-  box-shadow: 0 1px 1px -2px #0003,0 1px 2px 0 #00000024,0 1px 2px 0 #0000001f;
+  box-shadow: 0 1px 1px -2px #0003, 0 1px 2px 0 #00000024, 0 1px 2px 0 #0000001f;
   margin-right: 20px !important;
 }
 
@@ -95,7 +96,7 @@ button.btnMyFoodLista{
 }
 
 
-app-barra > mat-sidenav-container > mat-sidenav {
+app-barra>mat-sidenav-container>mat-sidenav {
   background-color: #f7d4ab54 !important;
 }
 
@@ -103,7 +104,7 @@ app-barra > mat-sidenav-container > mat-sidenav {
   border-right: 0px !important;
 }
 
-mat-nav-list > a.itens {
+mat-nav-list>a.itens {
   margin-top: 0px;
   margin-left: 15px;
   margin-bottom: 20px;
@@ -113,18 +114,18 @@ mat-nav-list > a.itens {
   font-weight: 500 !important;
 }
 
-mat-nav-list > a.itens:hover {
+mat-nav-list>a.itens:hover {
   color: #f7941e !important;
 }
 
-main > app-cardapio > section > mat-card {
+main>app-produtos>section>mat-card {
   max-width: 250px !important;
   display: flex !important;
   flex-direction: column;
   justify-content: space-between;
 }
 
-main > app-home > section {
+main>app-home>section {
   padding: 40px;
 }
 
@@ -133,28 +134,28 @@ table {
   width: 100%;
 }
 
-app-listar > table > tbody > tr {
+app-listar>table>tbody>tr {
   height: 40px !important;
 }
 
-app-listar > table > thead > tr > th:nth-child(1),
-app-listar > table > tbody > tr > td:nth-child(1) {
+app-listar>table>thead>tr>th:nth-child(1),
+app-listar>table>tbody>tr>td:nth-child(1) {
   padding: 0px 10px 0px 10px !important;
   text-align: center;
   width: 30px;
 }
 
-app-listar > table > thead > tr > th:nth-child(2),
-app-listar > table > tbody > tr > td:nth-child(2) {
+app-listar>table>thead>tr>th:nth-child(2),
+app-listar>table>tbody>tr>td:nth-child(2) {
   width: 200px;
   padding: 0px 10px 0px 10px !important;
 }
 
-app-listar > table > thead > tr > th:nth-child(4) {
+app-listar>table>thead>tr>th:nth-child(4) {
   text-align: center;
 }
 
-app-listar > table > tbody > tr > td:nth-child(4) {
+app-listar>table>tbody>tr>td:nth-child(4) {
   width: 60px;
   padding-right: 10px;
   text-align: right;
@@ -164,6 +165,6 @@ button {
   margin-bottom: 20px;
 }
 
-app-listar > table > tbody > tr > td a {
+app-listar>table>tbody>tr>td a {
   margin: 0px 5px 0px 5px;
 }

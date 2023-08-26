@@ -4,14 +4,13 @@ import { CarrinhoService } from '../services/carrinho.service';
 import { ProdutoService } from 'src/app/services/produto.service';
 import { Observable } from 'rxjs';
 @Component({
-  selector: 'app-cardapio',
-  templateUrl: './cardapio.component.html',
-  styleUrls: ['./cardapio.component.css'],
+  selector: 'app-produtos',
+  templateUrl: './produtos.component.html',
+  styleUrls: ['./produtos.component.css'],
 })
-export class CardapioComponent implements OnInit {
-
+export class ProdutosComponent implements OnInit {
   itensDoCarrinho: Observable<Produto[]> = new Observable<Produto[]>();
-  URL_SERVIDOR_UPLOAD_FOTO : string = "http://localhost:3000/fotos/";
+  URL_SERVIDOR_UPLOAD_FOTO: string = 'http://localhost:3000/fotos/';
 
   constructor(
     private carrinhoService: CarrinhoService,

@@ -1,4 +1,4 @@
-.card-cardapio {
+.card-produtos {
   max-width: 400px;
   margin: 20px;
 }
@@ -6,17 +6,17 @@
 .card-header-image {
   background-image: url('../../assets/img/icone_prato.jpg');
   background-size: cover;
-  
+
 }
 
-.cards-cardapio {
+.cards-produtos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
 }
 
-.card-actions{
+.card-actions {
   display: flex;
   justify-content: space-around;
   align-items: baseline;

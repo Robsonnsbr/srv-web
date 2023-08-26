@@ -36,26 +36,29 @@ import { LojaIncluirComponent } from './cadastros/lojas/incluir.component';
 import { LojaEditarComponent } from './cadastros/lojas/editar.component';
 import { LojaExcluirComponent } from './cadastros/lojas/excluir.component';
 import { PedidoComponent } from './carrinho/pedido/pedido.component';
-import { CardapioComponent } from './cardapio/cardapio.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { AuthService as AuthGuard } from './services/auth.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent},
-  { path: 'registrar', component: RegistrarComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'registrar', component: RegistrarComponent },
   { path: 'sobre', component: SobreComponent },
-  { path: 'carrinho', component: CarrinhoComponent,
+  {
+    path: 'carrinho',
+    component: CarrinhoComponent,
     children: [
       { path: '', component: PedidoComponent },
       { path: 'sucesso', component: SucessoComponent },
       { path: 'erro', component: ErroComponent },
     ],
   },
-  { path: 'cardapio', component: CardapioComponent },
-  { path: 'meuspedidos', component: MeusPedidosComponent},
+  { path: 'produtos', component: ProdutosComponent },
+  { path: 'meuspedidos', component: MeusPedidosComponent },
   {
-    path: 'cadastros', component: CadastrosComponent,
+    path: 'cadastros',
+    component: CadastrosComponent,
     canActivate: [AuthGuard],
     children: [
       { path: '', component: PratoEditarComponent },
@@ -75,8 +78,14 @@ const routes: Routes = [
       { path: 'pedidos/editar/:codigo', component: PedidoEditarComponent },
       { path: 'categorias', component: CategoriaListarComponent },
       { path: 'categorias/incluir', component: CategoriaIncluirComponent },
-      { path: 'categorias/editar/:codigo', component: CategoriaEditarComponent },
-      { path: 'categorias/excluir/:codigo', component: CategoriaExcluirComponent },
+      {
+        path: 'categorias/editar/:codigo',
+        component: CategoriaEditarComponent,
+      },
+      {
+        path: 'categorias/excluir/:codigo',
+        component: CategoriaExcluirComponent,
+      },
       { path: 'status', component: StatusListarComponent },
       { path: 'status/incluir', component: StatusIncluirComponent },
       { path: 'status/editar/:codigo', component: StatusEditarComponent },
@@ -86,7 +95,7 @@ const routes: Routes = [
       { path: 'lojas/editar/:codigo', component: LojaEditarComponent },
       { path: 'lojas/excluir/:codigo', component: LojaExcluirComponent },
     ],
-  }
+  },
 ];
 
 @NgModule({
