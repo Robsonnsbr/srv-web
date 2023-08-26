@@ -1,8 +1,8 @@
 <div class="tituloListas">
-    <h1>Lista de produtos</h1>
-    <button class="btnMyFoodLista" routerLink="/cadastros/produtos/incluir" color="primary">Incluir</button>
+  <h1>Lista de produtos</h1>
+  <button class="btnProdutosLista" routerLink="/cadastros/produtos/incluir" color="primary">Incluir</button>
 </div>
-<table mat-table [dataSource]="produtos" >
+<table mat-table [dataSource]="produtos">
 
   <ng-container matColumnDef="codigo">
     <th mat-header-cell *matHeaderCellDef> Código </th>
