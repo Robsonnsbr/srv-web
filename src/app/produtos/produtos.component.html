@@ -1,4 +1,9 @@
 <section class="cards-produtos">
+  <input type="text" [(ngModel)]="filter" placeholder="Filtrar por Nome/Desc">
+  <button mat-button (click)="filtrarPorAtributos()">Filtrar</button>
+</section>
+
+<section class="cards-produtos">
   <mat-card class="card-produtos" *ngFor="let produto of itensDoCarrinho | async">
     <mat-card-header>
       <div mat-card-avatar class="card-header-image"></div>
