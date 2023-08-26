@@ -5,6 +5,7 @@
 }
 
 .logo {
+  max-width: 100px;
   flex: 0 0 150px;
 }
 
@@ -13,12 +14,12 @@
 }
 
 
-.titulo{
+.titulo {
   font-weight: bold;
   font-size: 2em;
 }
 
 
-.texto{
+.texto {
   font-size: 1.5em;
 }
