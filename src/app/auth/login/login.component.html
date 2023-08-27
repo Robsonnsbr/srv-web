@@ -3,10 +3,11 @@
     <form [formGroup]="loginForm" (ngSubmit)="logar()">
       <h2>Autenticar no sistema</h2>
       <p><strong>Usuários e senha para teste:</strong></p>
+      <p>Apenas o usuário <strong>Bruno</strong>(adm) pode modificar itens</p>
       <p>E-mail: bruno@gmail.com, michael@gmail.com</p>
       <p>Senha: Senha123</p>
       <mat-error *ngIf="isInvalido">
-         O usuário e a senha são inválidos!
+        O usuário e a senha são inválidos!
       </mat-error>
       <mat-form-field class="full-width-input">
         <input matInput type="email" placeholder="E-mail" formControlName="email" value="bruno@gmail.com" required>
