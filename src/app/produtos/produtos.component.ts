@@ -130,7 +130,6 @@ export class ProdutosComponent implements OnInit {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
 
-    // Verifica se o filtro está ativo para aplicá-lo ou não
     this.produtosExibidos = this.filtroAtivo
       ? this.filterProducts().slice(startIndex, endIndex)
       : this.produtosFiltrados.slice(startIndex, endIndex);

@@ -5,6 +5,7 @@ export class Produto {
   nome: string = '';
   descricao: string = '';
   foto: string = 'semfoto.png';
+  image: string = 'semfoto.png';
   categoria: Categoria = new Categoria();
   preco: number = 0;
   peso: number = 0;
