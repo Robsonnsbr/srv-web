@@ -34,7 +34,7 @@ import { CadastrosComponent } from './cadastros/cadastros.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { BarraComponent } from './cadastros/barra/barra.component';
 import { SeletorHomeComponent } from './home/seletor/seletor.component';
-import { PratoEditarComponent } from './cadastros/prato/editar.component';
+import { ItemEditarComponent } from './cadastros/item/editar.component';
 import { SeletorCarrinhoComponent } from './carrinho/seletor/seletor.component';
 import { CategoriaListarComponent } from './cadastros/categorias/listar.component';
 import { CategoriaIncluirComponent } from './cadastros/categorias/incluir.component';
@@ -98,7 +98,7 @@ import { ErroComponent } from './carrinho/erro/erro.component';
     UsuarioEditarComponent,
     PedidoEditarComponent,
     PedidoListarComponent,
-    PratoEditarComponent,
+    ItemEditarComponent,
     ProdutoListarComponent,
     ProdutoEditarComponent,
     ProdutoIncluirComponent,

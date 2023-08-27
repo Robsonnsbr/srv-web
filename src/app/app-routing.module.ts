@@ -20,7 +20,7 @@ import { UsuarioEditarComponent } from './cadastros/usuarios/editar.component';
 import { UsuarioExcluirComponent } from './cadastros/usuarios/excluir.component';
 import { PedidoListarComponent } from './cadastros/pedidos/listar.component';
 import { PedidoEditarComponent } from './cadastros/pedidos/editar.component';
-import { PratoEditarComponent } from './cadastros/prato/editar.component';
+import { ItemEditarComponent } from './cadastros/item/editar.component';
 import { ProdutoListarComponent } from './cadastros/produtos/listar.component';
 import { ProdutoIncluirComponent } from './cadastros/produtos/incluir.component';
 import { ProdutoEditarComponent } from './cadastros/produtos/editar.component';
@@ -61,7 +61,7 @@ const routes: Routes = [
     component: CadastrosComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: '', component: PratoEditarComponent },
+      { path: '', component: ItemEditarComponent },
       { path: 'produtos', component: ProdutoListarComponent },
       { path: 'produtos/incluir', component: ProdutoIncluirComponent },
       { path: 'produtos/editar/:codigo', component: ProdutoEditarComponent },

@@ -1,7 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CarrinhoService } from '../services/carrinho.service';
 import { ProdutoService } from 'src/app/services/produto.service';
-import { PratoService } from 'src/app/services/prato.service';
+import { ItemService } from 'src/app/services/item.service';
 import { Produto } from '../models/produto.model';
 
 @Component({
@@ -10,20 +10,20 @@ import { Produto } from '../models/produto.model';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  produto: Produto = { foto: 'semfoto.png' } as Produto;
 
-  produto: Produto = {foto:'semfoto.png'} as Produto;
+  URL_SERVIDOR_UPLOAD_FOTO: string = 'http://localhost:3000/fotos/';
 
-  URL_SERVIDOR_UPLOAD_FOTO : string = "http://localhost:3000/fotos/";
-
-  constructor(private pratoService: PratoService,
-    private carrinhoService: CarrinhoService, 
-    private produtoService : ProdutoService) {
-  }
+  constructor(
+    private itemService: ItemService,
+    private carrinhoService: CarrinhoService,
+    private produtoService: ProdutoService
+  ) {}
 
   ngOnInit(): void {
-    this.pratoService.carregar().subscribe( prato => {
-      prato.produto.quantidade = 1;
-      this.produto = prato.produto;
+    this.itemService.carregar().subscribe((item) => {
+      item.produto.quantidade = 1;
+      this.produto = item.produto;
     });
   }
 
