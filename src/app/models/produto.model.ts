@@ -13,6 +13,5 @@ export class Produto {
   totalDeAvaliacoes: number = 0;
   disponibilidade: number = 0;
   totalDeCompras: number = 0;
-  ehVegetariano: boolean = false;
-  quantidade: number = 0
+  quantidade: number = 0;
 }

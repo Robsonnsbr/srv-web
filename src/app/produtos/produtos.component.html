@@ -1,10 +1,10 @@
 <section class="cards-produtos">
-  <input type="text" [(ngModel)]="filter" placeholder="Filtrar por Nome/Desc">
+  <input type="text" [(ngModel)]="filter" placeholder="Filtrar por nome ou descrição">
   <button mat-button (click)="filtrarPorAtributos()">Filtrar</button>
 </section>
 
 <section class="cards-produtos">
-  <mat-card class="card-produtos" *ngFor="let produto of itensDoCarrinho | async">
+  <mat-card class="card-produtos" *ngFor="let produto of produtosExibidos">
     <mat-card-header>
       <div mat-card-avatar class="card-header-image"></div>
       <mat-card-title>{{ produto.nome }}</mat-card-title>
@@ -21,4 +21,11 @@
       <button mat-button (click)="adicionarAoCarrinho(produto)">ADICIONAR</button>
     </mat-card-actions>
   </mat-card>
+</section>
+<section class="cards-produtos">
+  <div class="pagination">
+    <button mat-button (click)="onPageChange(currentPage - 1)" [disabled]="!hasPreviousPage()">Anterior</button>
+    <span>Página {{ currentPage }}</span>
+    <button mat-button (click)="onPageChange(currentPage + 1)" [disabled]="!hasNextPage()">Próxima</button>
+  </div>
 </section>
