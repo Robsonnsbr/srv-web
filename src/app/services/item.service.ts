@@ -12,7 +12,6 @@ export class ItemService {
   constructor(protected http: HttpClient) {}
 
   carregar(): Observable<Item> {
-    console.log('entrei aqui');
     let response = this.http.get<Item>(this.url);
     return response;
   }

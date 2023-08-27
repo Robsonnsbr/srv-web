@@ -120,9 +120,10 @@ export class ProdutosComponent implements OnInit {
   }
 
   filtrarPorAtributos() {
-    this.filtroAtivo = true; // Ative o filtro quando o botão for clicado
+    this.filtroAtivo = true;
     this.atualizarItensExibidos();
     this.filterProducts();
+    this.filter = '';
   }
 
   atualizarItensExibidos() {
