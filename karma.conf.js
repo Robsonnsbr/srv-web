@@ -1,3 +1,5 @@
+const dotenv = require("karma-dotenv");
+
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
@@ -11,6 +13,7 @@ module.exports = function (config) {
       require("karma-jasmine-html-reporter"),
       require("karma-coverage"),
       require("@angular-devkit/build-angular/plugins/karma"),
+      require("dotenv"),
     ],
     client: {
       jasmine: {
@@ -35,6 +38,9 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ["Chrome"],
+    dotenv: {
+      path: "./.env", // Caminho para o seu arquivo .env
+    },
     singleRun: false,
     restartOnFileChange: true,
   });
